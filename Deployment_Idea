@@ -1,0 +1,26 @@
+To deploy the Weather Data Ingestion and API project on AWS, I will use a combination of AWS services to ensure scalability, reliability, and ease of management. The primary AWS services I will use include:
+
+-Amazon EC2 for the API
+-Amazon RDS for the database
+-AWS Lambda and Amazon CloudWatch for scheduled data ingestion
+-Amazon S3 for raw data storage
+-AWS IAM for access management
+
+Architecture
+
+API Deployment:
+I will use Amazon EC2 to host my Flask API. EC2 provides a flexible compute environment with control over the configuration, allowing for scaling based on demand.
+
+Database:
+I will use Amazon RDS (Relational Database Service) for a fully managed relational database service supporting multiple database engines, including SQLite (though typically, I'd use MySQL or PostgreSQL for production).
+Scheduled
+
+Data Ingestion:
+I will use AWS Lambda for the serverless compute service, which allows running code without provisioning or managing servers. It will handle the data ingestion process.
+I will schedule Lambda functions using Amazon CloudWatch Events to automate the data ingestion process.
+
+Raw Data Storage:
+I will use Amazon S3 (Simple Storage Service) for scalable object storage for raw data files. My data ingestion script will read data files directly from an S3 bucket.
+
+Access Management:
+I will use AWS IAM (Identity and Access Management) to securely control access to AWS services and resources. I will use IAM roles and policies to manage permissions.
